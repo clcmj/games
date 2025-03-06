@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>打砖块 - 像素风经典游戏合集</title>
+    <link rel="stylesheet" href="../css/games.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-main">
+            <h1>打砖块</h1>
+            <div class="game-stats">
+                <div class="score">分数: <span id="score">0</span></div>
+                <div class="lives">生命: <span id="lives">3</span></div>
+            </div>
+            <canvas id="gameCanvas" width="480" height="640"></canvas>
+            <div class="controls">
+                <button id="startBtn">开始游戏</button>
+                <button id="pauseBtn">暂停</button>
+                <a href="../index.html" class="back-btn">返回主页</a>
+            </div>
+        </div>
+        <div class="game-sidebar">
+            <div class="game-info">
+                <h2>游戏说明</h2>
+                <div class="info-section">
+                    <h3>操作方法</h3>
+                    <ul>
+                        <li>← → 左右移动挡板</li>
+                        <li>空格键 发射小球</li>
+                    </ul>
+                </div>
+                <div class="info-section">
+                    <h3>游戏规则</h3>
+                    <ul>
+                        <li>用挡板反弹小球</li>
+                        <li>击中砖块得分</li>
+                        <li>消除所有砖块获胜</li>
+                        <li>小球落地失去一条生命</li>
+                        <li>生命耗尽游戏结束</li>
+                    </ul>
+                </div>
+                <div class="info-section">
+                    <h3>提示</h3>
+                    <ul>
+                        <li>控制挡板中心击球</li>
+                        <li>预判小球反弹路径</li>
+                        <li>注意保持生命值</li>
+                        <li>合理规划击球策略</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/breakout.js"></script>
+</body>
+</html> 

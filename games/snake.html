@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>贪吃蛇 - 像素风经典游戏合集</title>
+    <link rel="stylesheet" href="../css/games.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-main">
+            <h1>贪吃蛇</h1>
+            <div class="game-stats">
+                <div class="score">分数: <span id="score">0</span></div>
+                <div class="high-score">最高分: <span id="highScore">0</span></div>
+            </div>
+            <canvas id="gameCanvas" width="400" height="400"></canvas>
+            <div class="controls">
+                <button id="startBtn">开始游戏</button>
+                <button id="pauseBtn">暂停</button>
+                <a href="../index.html" class="back-btn">返回主页</a>
+            </div>
+        </div>
+        <div class="game-sidebar">
+            <div class="game-info">
+                <h2>游戏说明</h2>
+                <div class="info-section">
+                    <h3>操作方法</h3>
+                    <ul>
+                        <li>↑ 或 W：向上移动</li>
+                        <li>↓ 或 S：向下移动</li>
+                        <li>← 或 A：向左移动</li>
+                        <li>→ 或 D：向右移动</li>
+                    </ul>
+                </div>
+                <div class="info-section">
+                    <h3>游戏规则</h3>
+                    <ul>
+                        <li>控制蛇移动收集食物</li>
+                        <li>每吃到一个食物得10分</li>
+                        <li>蛇身会随着得分增长</li>
+                        <li>撞到墙壁或自己游戏结束</li>
+                    </ul>
+                </div>
+                <div class="info-section">
+                    <h3>提示</h3>
+                    <ul>
+                        <li>注意规划移动路线</li>
+                        <li>避免将自己围死</li>
+                        <li>可以暂停游戏休息</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/snake.js"></script>
+</body>
+</html> 

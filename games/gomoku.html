@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>五子棋 - 像素风经典游戏合集</title>
+    <link rel="stylesheet" href="../css/games.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-main">
+            <h1>五子棋</h1>
+            <div class="game-stats">
+                <div class="current-player">当前玩家: <span id="currentPlayer">黑子</span></div>
+            </div>
+            <canvas id="gameCanvas" width="400" height="400"></canvas>
+            <div class="controls">
+                <button id="restartBtn">重新开始</button>
+                <a href="../index.html" class="back-btn">返回主页</a>
+            </div>
+        </div>
+        <div class="game-sidebar">
+            <div class="game-info">
+                <h2>游戏说明</h2>
+                <div class="info-section">
+                    <h3>操作方法</h3>
+                    <ul>
+                        <li>点击棋盘落子</li>
+                        <li>点击重新开始重置棋局</li>
+                    </ul>
+                </div>
+                <div class="info-section">
+                    <h3>游戏规则</h3>
+                    <ul>
+                        <li>黑子先手，双方轮流下棋</li>
+                        <li>横向、纵向或斜向连成五子获胜</li>
+                        <li>已下位置不能重复落子</li>
+                        <li>棋子一旦落下不能移动</li>
+                    </ul>
+                </div>
+                <div class="info-section">
+                    <h3>提示</h3>
+                    <ul>
+                        <li>注意防守对手连子</li>
+                        <li>可以通过双三、双四等方式获胜</li>
+                        <li>开局可以占据中心位置</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/gomoku.js"></script>
+</body>
+</html> 

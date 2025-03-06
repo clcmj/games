@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>扫雷 - 像素风经典游戏合集</title>
+    <link rel="stylesheet" href="../css/games.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-main">
+            <h1>扫雷</h1>
+            <div class="game-stats">
+                <div class="mines-left">剩余地雷: <span id="minesLeft">10</span></div>
+                <div class="timer">时间: <span id="timer">0</span></div>
+            </div>
+            <canvas id="gameCanvas" width="400" height="400"></canvas>
+            <div class="controls">
+                <button id="restartBtn">重新开始</button>
+                <select id="difficultySelect">
+                    <option value="easy">简单 (9x9, 10雷)</option>
+                    <option value="medium">中等 (16x16, 40雷)</option>
+                    <option value="hard">困难 (16x16, 99雷)</option>
+                </select>
+                <a href="../index.html" class="back-btn">返回主页</a>
+            </div>
+        </div>
+        <div class="game-sidebar">
+            <div class="game-info">
+                <h2>游戏说明</h2>
+                <div class="info-section">
+                    <h3>操作方法</h3>
+                    <ul>
+                        <li>左键点击揭开方块</li>
+                        <li>右键点击标记地雷</li>
+                        <li>双击已开方块快速展开</li>
+                    </ul>
+                </div>
+                <div class="info-section">
+                    <h3>游戏规则</h3>
+                    <ul>
+                        <li>避开所有地雷</li>
+                        <li>数字表示周围地雷数</li>
+                        <li>标记所有地雷获胜</li>
+                        <li>点到地雷游戏结束</li>
+                        <li>可选择不同难度</li>
+                    </ul>
+                </div>
+                <div class="info-section">
+                    <h3>提示</h3>
+                    <ul>
+                        <li>优先点击角落和边缘</li>
+                        <li>利用数字推理地雷位置</li>
+                        <li>不确定时先标记可疑处</li>
+                        <li>合理利用双击快速展开</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/minesweeper.js"></script>
+</body>
+</html> 

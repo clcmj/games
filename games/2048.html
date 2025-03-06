@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2048 - 像素风经典游戏合集</title>
+    <link rel="stylesheet" href="../css/games.css">
+    <style>
+        .game-board {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            background-color: #bbada0;
+            padding: 10px;
+            border-radius: 6px;
+            width: 400px;
+            height: 400px;
+        }
+
+        .tile {
+            background-color: #cdc1b4;
+            border-radius: 3px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #776e65;
+            transition: all 0.15s ease;
+        }
+
+        .tile[data-value="2"] { background-color: #eee4da; }
+        .tile[data-value="4"] { background-color: #ede0c8; }
+        .tile[data-value="8"] { background-color: #f2b179; color: #f9f6f2; }
+        .tile[data-value="16"] { background-color: #f59563; color: #f9f6f2; }
+        .tile[data-value="32"] { background-color: #f67c5f; color: #f9f6f2; }
+        .tile[data-value="64"] { background-color: #f65e3b; color: #f9f6f2; }
+        .tile[data-value="128"] { background-color: #edcf72; color: #f9f6f2; font-size: 20px; }
+        .tile[data-value="256"] { background-color: #edcc61; color: #f9f6f2; font-size: 20px; }
+        .tile[data-value="512"] { background-color: #edc850; color: #f9f6f2; font-size: 20px; }
+        .tile[data-value="1024"] { background-color: #edc53f; color: #f9f6f2; font-size: 18px; }
+        .tile[data-value="2048"] { background-color: #edc22e; color: #f9f6f2; font-size: 18px; }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-main">
+            <h1>2048</h1>
+            <div class="game-stats">
+                <div class="score">分数: <span id="score">0</span></div>
+                <div class="high-score">最高分: <span id="highScore">0</span></div>
+            </div>
+            <div class="game-board" id="gameBoard"></div>
+            <div class="controls">
+                <button id="startBtn">新游戏</button>
+                <a href="../index.html" class="back-btn">返回主页</a>
+            </div>
+        </div>
+        <div class="game-sidebar">
+            <div class="game-info">
+                <h2>游戏说明</h2>
+                <div class="info-section">
+                    <h3>操作方法</h3>
+                    <ul>
+                        <li>↑ 或 W：向上滑动</li>
+                        <li>↓ 或 S：向下滑动</li>
+                        <li>← 或 A：向左滑动</li>
+                        <li>→ 或 D：向右滑动</li>
+                    </ul>
+                </div>
+                <div class="info-section">
+                    <h3>游戏规则</h3>
+                    <ul>
+                        <li>相同数字的方块相撞会合并</li>
+                        <li>每次移动后会出现新方块</li>
+                        <li>方块数字会翻倍增长</li>
+                        <li>达成2048获得胜利</li>
+                    </ul>
+                </div>
+                <div class="info-section">
+                    <h3>提示</h3>
+                    <ul>
+                        <li>保持大数字在角落</li>
+                        <li>避免小数字分散</li>
+                        <li>提前规划合并路线</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/2048.js"></script>
+</body>
+</html> 

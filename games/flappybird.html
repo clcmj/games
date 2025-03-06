@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy Bird - 像素风经典游戏合集</title>
+    <link rel="stylesheet" href="../css/games.css">
+    <style>
+        canvas {
+            background-color: #4dc1f9;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-main">
+            <h1>Flappy Bird</h1>
+            <div class="game-stats">
+                <div class="score">分数: <span id="score">0</span></div>
+                <div class="high-score">最高分: <span id="highScore">0</span></div>
+            </div>
+            <canvas id="gameCanvas" width="400" height="400"></canvas>
+            <div class="controls">
+                <button id="startBtn">开始游戏</button>
+                <a href="../index.html" class="back-btn">返回主页</a>
+            </div>
+        </div>
+        <div class="game-sidebar">
+            <div class="game-info">
+                <h2>游戏说明</h2>
+                <div class="info-section">
+                    <h3>操作方法</h3>
+                    <ul>
+                        <li>空格键：跳跃</li>
+                        <li>点击屏幕：跳跃</li>
+                    </ul>
+                </div>
+                <div class="info-section">
+                    <h3>游戏规则</h3>
+                    <ul>
+                        <li>控制小鸟穿过管道</li>
+                        <li>每通过一对管道得1分</li>
+                        <li>碰到管道或地面游戏结束</li>
+                        <li>尽可能获得高分</li>
+                    </ul>
+                </div>
+                <div class="info-section">
+                    <h3>提示</h3>
+                    <ul>
+                        <li>保持轻点跳跃的节奏</li>
+                        <li>预判管道间隙位置</li>
+                        <li>不要跳得太高或太低</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/flappybird.js"></script>
+</body>
+</html> 

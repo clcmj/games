@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Press Start 2P', cursive;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    line-height: 1.6;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.main-content {
+    width: 100%;
+    overflow: hidden;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    text-shadow: 4px 4px 0px #000;
+    font-size: 2.5rem;
+}
+
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    justify-items: center;
+}
+
+.sidebar {
+    width: 300px;
+    background-color: #34495e;
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 6px solid #2980b9;
+    overflow-y: auto;
+    max-height: 100%;
+}
+
+.game-instructions {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.game-instructions h3 {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #3498db;
+    text-shadow: 2px 2px 0px #000;
+}
+
+.instruction-card {
+    background-color: #2c3e50;
+    border: 3px solid #3498db;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.instruction-card h4 {
+    color: #3498db;
+    margin-bottom: 0.8rem;
+    font-size: 0.9rem;
+    text-shadow: 1px 1px 0px #000;
+}
+
+.instruction-card p {
+    font-size: 0.7rem;
+    margin: 0.5rem 0;
+    color: #ecf0f1;
+}
+
+.game-card {
+    background-color: #34495e;
+    border: 6px solid #2980b9;
+    padding: 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    color: #ecf0f1;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 12px;
+    aspect-ratio: 1;
+}
+
+.game-card:hover {
+    transform: translateY(-8px);
+    border-color: #3498db;
+    box-shadow: 0 0 30px rgba(52, 152, 219, 0.6);
+}
+
+.game-icon {
+    width: 200px;
+    height: 200px;
+    margin: 1rem auto;
+    background-color: #000;
+    border: 4px solid #3498db;
+    position: relative;
+    overflow: hidden;
+}
+
+.snake-icon {
+    background-color: #000;
+    position: relative;
+}
+
+.snake-icon::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #39ff14;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 
+        20px 0 0 0 #39ff14,
+        40px 0 0 0 #39ff14,
+        0 20px 0 0 #39ff14,
+        20px 20px 0 0 #39ff14;
+}
+
+.gomoku-icon {
+    background-color: #f0c78a;
+    position: relative;
+}
+
+.gomoku-icon::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(#000 1px, transparent 1px),
+        linear-gradient(90deg, #000 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+.minesweeper-icon {
+    background-color: #a0a0a0;
+    position: relative;
+}
+
+.minesweeper-icon::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #e0e0e0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid #808080;
+    box-shadow: 
+        -40px -40px 0 0 #ff0000,
+        0 -40px 0 0 #0000ff,
+        40px -40px 0 0 #e0e0e0,
+        -40px 0 0 0 #e0e0e0,
+        40px 0 0 0 #e0e0e0,
+        -40px 40px 0 0 #e0e0e0,
+        0 40px 0 0 #e0e0e0,
+        40px 40px 0 0 #e0e0e0;
+}
+
+.tetris-icon {
+    background-color: #000;
+    position: relative;
+}
+
+.tetris-icon::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #00f0f0;
+    box-shadow: 
+        30px 0 0 0 #f0a000,
+        -30px 0 0 0 #f00000,
+        0 30px 0 0 #00f000;
+}
+
+.breakout-icon {
+    background-color: #000;
+    position: relative;
+}
+
+.breakout-icon::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 10px;
+    background-color: #3498db;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.breakout-icon::before {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+    border-radius: 50%;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 
+        -60px -100px 0 0 #e74c3c,
+        0 -100px 0 0 #e67e22,
+        60px -100px 0 0 #f1c40f,
+        -60px -60px 0 0 #2ecc71,
+        0 -60px 0 0 #3498db,
+        60px -60px 0 0 #9b59b6;
+}
+
+.game2048-icon {
+    background-color: #faf8ef;
+    position: relative;
+}
+
+.game2048-icon::after {
+    content: '2048';
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background-color: #edc53f;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    box-shadow: 
+        -50px -50px 0 0 #eee4da,
+        0 -50px 0 0 #ede0c8,
+        50px -50px 0 0 #f2b179,
+        -50px 0 0 0 #f59563,
+        50px 0 0 0 #f67c5f,
+        -50px 50px 0 0 #f65e3b,
+        0 50px 0 0 #edcf72,
+        50px 50px 0 0 #edcc61;
+}
+
+.flappybird-icon {
+    background: linear-gradient(to bottom, #4dc1f9 0%, #4dc1f9 50%, #c0c0c0 50%, #c0c0c0 100%);
+    position: relative;
+}
+
+.flappybird-icon::before {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 30px;
+    background-color: #f7e334;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50% 50% 20% 20%;
+    box-shadow: 
+        0 -5px 0 0 #e87835,
+        0 5px 0 0 #e87835;
+}
+
+.flappybird-icon::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    background-color: #73bf2e;
+    bottom: 0;
+    right: 30%;
+    box-shadow: 
+        80px 40px 0 0 #73bf2e;
+}
+
+.pacman-icon {
+    background-color: #000;
+    position: relative;
+}
+
+.pacman-icon::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 40px solid #ffff00;
+    border-radius: 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    clip-path: polygon(100% 0, 100% 100%, 0 50%);
+}
+
+.pacman-icon::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    top: 50%;
+    left: 70%;
+    transform: translateY(-50%);
+    box-shadow: 
+        20px 0 0 0 #fff,
+        40px 0 0 0 #fff,
+        60px 0 0 0 #fff;
+}
+
+h2 {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    color: #ecf0f1;
+    text-shadow: 2px 2px 0px #000;
+}
+
+@media (max-width: 1400px) {
+    .game-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .game-icon {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+@media (max-width: 1024px) {
+    body {
+        padding: 1rem;
+        height: auto;
+        overflow: auto;
+    }
+    
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .sidebar {
+        width: 100%;
+        max-height: none;
+    }
+    
+    .game-grid {
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+        height: auto;
+        overflow-y: auto;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .game-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .game-card {
+        padding: 1rem;
+    }
+
+    .game-icon {
+        width: 150px;
+        height: 150px;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+} 

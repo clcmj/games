@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>吃豆人 - 像素风经典游戏合集</title>
+    <link rel="stylesheet" href="../css/games.css">
+    <style>
+        canvas {
+            background-color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-main">
+            <h1>吃豆人</h1>
+            <div class="game-stats">
+                <div class="score">分数: <span id="score">0</span></div>
+                <div class="high-score">最高分: <span id="highScore">0</span></div>
+                <div class="lives">生命: <span id="lives">3</span></div>
+            </div>
+            <canvas id="gameCanvas" width="400" height="400"></canvas>
+            <div class="controls">
+                <button id="startBtn">开始游戏</button>
+                <a href="../index.html" class="back-btn">返回主页</a>
+            </div>
+        </div>
+        <div class="game-sidebar">
+            <div class="game-info">
+                <h2>游戏说明</h2>
+                <div class="info-section">
+                    <h3>操作方法</h3>
+                    <ul>
+                        <li>↑ 或 W：向上移动</li>
+                        <li>↓ 或 S：向下移动</li>
+                        <li>← 或 A：向左移动</li>
+                        <li>→ 或 D：向右移动</li>
+                    </ul>
+                </div>
+                <div class="info-section">
+                    <h3>游戏规则</h3>
+                    <ul>
+                        <li>吃掉所有小点得分</li>
+                        <li>躲避彩色幽灵</li>
+                        <li>吃到能量豆可以反击幽灵</li>
+                        <li>每关通关分数不同</li>
+                    </ul>
+                </div>
+                <div class="info-section">
+                    <h3>提示</h3>
+                    <ul>
+                        <li>注意幽灵移动规律</li>
+                        <li>合理利用能量豆</li>
+                        <li>善用地图过道</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/pacman.js"></script>
+</body>
+</html> 
